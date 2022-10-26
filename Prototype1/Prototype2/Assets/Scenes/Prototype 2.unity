@@ -397,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 10
-  xRange: 10
+  xRange: 20
   projectilePrefab: {fileID: 7546855961566993162, guid: d4b94eabbd4b63c4690355a134442f80, type: 3}
 --- !u!1 &534669902
 GameObject:
@@ -572,6 +572,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1095762424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 32380632794788855, guid: 453c02befbdaa374aad24d32a2957845, type: 3}
+  m_PrefabInstance: {fileID: 32380633317179643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1095762425
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095762424}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33711275, y: 1.0818087, z: 0.71331954}
+  m_Center: {x: -0.0024187565, y: 0.04090409, z: 0.037432402}
 --- !u!1 &1590138454
 GameObject:
   m_ObjectHideFlags: 0
