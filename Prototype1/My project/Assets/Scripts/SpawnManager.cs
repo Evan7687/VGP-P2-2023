@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public int enemyCount;
     public int waveNumber = 1;
 
+
     // Start is called before the first frame update
     void Start()
     {

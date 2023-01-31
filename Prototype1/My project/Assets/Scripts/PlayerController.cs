@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     public bool hasPowerup = false;
     public GameObject powerupIndicator;
+    public int powerUpDuration = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -35,13 +36,14 @@ public class PlayerController : MonoBehaviour
             hasPowerup = true;
             powerupIndicator.gameObject.SetActive(true);
             Destroy(other.gameObject);
-            StartCoroutine(PowerupCountdownRoutine());
+            StartCoroutine(PowerupCooldown());
         }
     }
 
-    IEnumerator PowerupCountdownRoutine()
+    IEnumerator PowerupCooldown()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(powerUpDuration);
+
         hasPowerup = false;
         powerupIndicator.gameObject.SetActive(false);
     }
