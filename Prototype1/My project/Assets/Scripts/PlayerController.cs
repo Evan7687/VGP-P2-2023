@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerup = false;
     public GameObject powerupIndicator;
     public int powerUpDuration = 5;
+    public PowerUpType currentPowerUp = PowerUpType.None;
 
     // Start is called before the first frame update
     void Start()
