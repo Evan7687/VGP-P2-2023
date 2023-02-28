@@ -23,7 +23,7 @@ public class RocketBehavior : MonoBehaviour
 
     public void Fire(Transform newTarget)
     {
-        target = homingTarget;
+        target = newTarget;
         homing = true;
         Destroy(gameObject, aliveTimer);
     }
@@ -36,7 +36,7 @@ public class RocketBehavior : MonoBehaviour
             {
                 Rigidbody targetRigidbody = col.gameObject.GetComponent<Rigidbody>();
                 Vector3 away = -col.contacts[0].normal;
-                targetRigidbody.Addforce(away * rocketStrength, ForceMode.Impulse);
+                targetRigidbody.AddForce(away * rocketStrength, ForceMode.Impulse);
                 Destroy(gameObject);
             }
         }
