@@ -15,6 +15,13 @@ public class PlayerController : MonoBehaviour
     public GameObject rocketPrefab;
     private GameObject tmpRocket;
     private Coroutine powerupCountdown;
+    public float hangTime;
+    public float smashSpeed;
+    public float explosionForce;
+    public float explosionRadius;
+
+    bool smashing = false;
+    float floorY;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
         if(currentPowerUp == PowerUpType.Rockets && Input.GetKeyDown(KeyCode.F))
         {
+            Debug.Log("fire");
             LaunchRockets();
         }
     }
@@ -83,4 +91,13 @@ public class PlayerController : MonoBehaviour
             tmpRocket.GetComponent<RocketBehavior>().Fire(enemy.transform);
         }
     }
-}
+    IEnumerator Smash()
+    {
+        var enemies = FindObjectsOfType<Enemy>();
+
+        //Store the y position before taking off
+        floorY = transform.position.y;
+    }
+}   
+
+
