@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &60101685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 785791934879278426, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 789092537666380468, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+      propertyPath: m_Name
+      value: PowerupRockets
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
 --- !u!1001 &245963551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,6 +292,7 @@ MonoBehaviour:
   powerupPrefabs:
   - {fileID: 789092537666380468, guid: 74cffdabddafa94479e95bc74023f030, type: 3}
   - {fileID: 789092537666380468, guid: 7cbd86ce621ddc948a796e29fe6f2d1e, type: 3}
+  - {fileID: 2551732626442472849, guid: 2ca1b6bb5c590024990622ed775e5157, type: 3}
   enemyCount: 0
   waveNumber: 1
 --- !u!4 &447971138
@@ -765,6 +823,10 @@ MonoBehaviour:
   powerUpDuration: 5
   currentPowerUp: 0
   rocketPrefab: {fileID: 7651469598176896033, guid: 1a17ff68b1d74684f8e6fbabc47ccfa7, type: 3}
+  hangTime: 0
+  smashSpeed: 0
+  explosionForce: 0
+  explosionRadius: 0
 --- !u!1001 &7305732181041295649
 PrefabInstance:
   m_ObjectHideFlags: 0
