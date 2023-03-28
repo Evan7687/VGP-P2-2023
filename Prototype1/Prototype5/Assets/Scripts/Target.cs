@@ -29,7 +29,7 @@ public class Target : MonoBehaviour
     {
         
     }
-
+/*
     private void OnMouseDown()
     {
         if(gameManager.isGameActive && !gameManager.paused)
@@ -39,13 +39,25 @@ public class Target : MonoBehaviour
             gameManager.UpdateScore(pointValue);
         }
     }
-
+    */
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
         if(!gameObject.CompareTag("Bad") && gameManager.isGameActive)
         {
             gameManager.UpdateLives(-1);
+        }
+    }
+
+    public void DestroyTarget()
+    {
+        //access the gameManager script and see if the game is active or not
+        if(gameManager.isGameActive)
+        {
+            Destroy(gameObject); //destroy current target
+            //create an explotion where the target used to be
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            gameManager.UpdateScore(pointValue);
         }
     }
 

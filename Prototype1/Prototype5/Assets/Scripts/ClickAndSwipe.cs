@@ -64,6 +64,7 @@ public class ClickAndSwipe : MonoBehaviour
         if(collision.gameObject.GetComponent<Target>())
         {
             //Destroy the target
+            collision.gameObject.GetComponent<Target>().DestroyTarget();
         }
     }
 }
