@@ -1,3 +1,6 @@
+//Using statemetns are like import statements
+//They bring code in from another program into your program
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +10,13 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    //variables
     public List<GameObject> targets;
     private float spawnRate = 2.0f;
     public TextMeshProUGUI scoreText;
     private int score;
     public TextMeshProUGUI gameOverText;
-    public bool isGameActive;
+    public bool isGameActive; //bool is short for boolean
     public Button restartButton;
     public GameObject titleScreen;
     public TextMeshProUGUI livesText;
@@ -45,9 +49,11 @@ public class GameManager : MonoBehaviour
             Instantiate(targets[index]);
         }
     }
-
+    //this is a method header or method signature for UpdateScore
+    //it has a parameter "scoreToAdd"
     public void UpdateScore(int scoreToAdd)
     {
+        //+= is like score = score + scoreToAdd
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
     }
@@ -56,12 +62,15 @@ public class GameManager : MonoBehaviour
     {
         lives += livesToChange;
         livesText.text = "Lives: " + lives;
+        //Tells us when to end the game if we are out of lives
         if (lives <= 0)
         {
+            //This is a method call
             GameOver();
         }
     }
 
+    //This is another method header/method signature that doesn't have a parameter
     public void GameOver()
     {
         restartButton.gameObject.SetActive(true);

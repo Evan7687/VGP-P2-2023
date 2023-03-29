@@ -22,7 +22,7 @@ public class ClickAndSwipe : MonoBehaviour
         col = GetComponent<BoxCollider>();
         trail.enabled = false;
         col.enabled = false;
-
+        //This "finds the GameManager script so we can use public variables and methods from it
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
