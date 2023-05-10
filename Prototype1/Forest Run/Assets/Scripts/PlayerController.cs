@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float verticalInput;
+    public float forwardInput;
     public float speed = 10.0f;
     public float xRange = 10.0f;
     public float zRange = 10.0f;
@@ -29,14 +29,20 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
         if (transform.position.z < -zRange)
         {
-            transform.position = new Vector3(-zRange, transform.position.x, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
         }
 
-        if (transform.position.z < zRange)
+        if (transform.position.z > zRange)
         {
-            transform.position = new Vector3(zRange, transform.position.x, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
         }
+
+        forwardInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
     }
 }
