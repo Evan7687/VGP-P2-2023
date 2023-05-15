@@ -481,7 +481,7 @@ MonoBehaviour:
   horizontalInput: 0
   forwardInput: 0
   speed: 10
-  xRange: 10
+  xRange: 18
   zRange: 10
 --- !u!1001 &796359359
 PrefabInstance:
