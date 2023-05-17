@@ -18,6 +18,7 @@ public class DetectCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Crash");
         Destroy(gameObject);
     }
 }
