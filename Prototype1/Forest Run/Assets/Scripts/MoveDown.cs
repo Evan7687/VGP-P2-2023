@@ -6,7 +6,7 @@ public class MoveDown : MonoBehaviour
 {
     private float speed = 30;
     private PlayerController playerControllerScript;
-    private float backBound = -15;
+    //private float backBound = -15;
 
     // Start is called before the first frame update
     void Start()
