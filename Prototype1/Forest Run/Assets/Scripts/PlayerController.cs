@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float xRange = 10.0f;
     public float zRange = 10.0f;
     public bool gameOver = false;
+    public GameObject pauseScreen;
+    public bool paused;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +47,26 @@ public class PlayerController : MonoBehaviour
 
         forwardInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+
+         if(Input.GetKeyDown(KeyCode.P))
+        {
+            ChangePaused();
+        }
+    }
+
+    void ChangePaused()
+    {
+        if(!paused)
+        {
+            paused = true;
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            paused = false;
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
 }
