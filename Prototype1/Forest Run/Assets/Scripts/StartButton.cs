@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class StartButton : MonoBehaviour
 {
-    public GameObject titleScreen;
+    //public GameObject titleScreen;
     private Button start;
     private PlayerController playerController;
 
@@ -14,7 +14,7 @@ public class StartButton : MonoBehaviour
     {
         start = GetComponent<Button>();
         start.onClick.AddListener(StartMyGame);
-        playerController = GameObject.Find("PlayerController").GetComponent<PlayerController>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public bool gameOver = false;
     public GameObject pauseScreen;
     public bool paused;
-    public GameObject titleScreen;
+    //public GameObject titleScreen;
     public bool isGameActive;
     
     // Start is called before the first frame update
@@ -75,6 +75,6 @@ public class PlayerController : MonoBehaviour
     public void StartGame()
     {
         isGameActive = true;
-        titleScreen.gameObject.SetActive(false);
+        //titleScreen.gameObject.SetActive(false);
     }
 }
