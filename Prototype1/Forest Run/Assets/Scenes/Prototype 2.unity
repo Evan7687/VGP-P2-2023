@@ -336,7 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4fa704af3346bf44b2dafe494f304a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 52522858}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1045,6 +1044,7 @@ MonoBehaviour:
   gameOver: 0
   pauseScreen: {fileID: 1587132880}
   paused: 0
+  titleScreen: {fileID: 314585431}
   isGameActive: 0
 --- !u!65 &699122502
 BoxCollider:
